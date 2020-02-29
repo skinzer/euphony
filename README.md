@@ -64,3 +64,4 @@ $ ./bin/run_[string | bitvec | circuit] [a SyGuS input file]
 # For example
 $ ./bin/run_string benchmarks/string/test/exceljet1.sl
 ```
+
