@@ -263,6 +263,7 @@ class SPhog:
         self.stat_map = stat_map
         self.instrs = instrs
         self.grammar = grammar
+
         self.enumerated_exps = []
         self.frontier = PriorityQueue()
         # pre processing for heuristic score function
@@ -333,7 +334,8 @@ class SPhog:
         m_sens = self.m_sens
         instrs = self.instrs
         stat_map = self.stat_map
-
+        print("Calling generate")
+        print(compute_term_signature)
     # ********************************************** Data structures ***************************************************
         # priority queue : list of str(rewrite)
         frontier = PriorityQueue()
