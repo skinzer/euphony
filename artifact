@@ -108,7 +108,7 @@ def run(args, logger):
     os.makedirs('euphony-out/' + args.cmd, 0o755, True)
     inputs = [ f for f in os.listdir('benchmarks/' + args.cmd + '/test') \
                if f.endswith('.sl')]
-    inputs = inputs if args.cmd == "string_flashfill" else [ f for f in inputs if is_valid(f) ] 
+    inputs = inputs if args.cmd == "string_flashfill" else [ f for f in inputs if is_valid(f) ]
     inputs = sorted(inputs)
 
     print_header(args)
