@@ -397,7 +397,7 @@ class SPhog:
         num_points = len(points)
         iterv = 0
         while not frontier.empty():
-            print("-------- iter {i} --------\n".format(i=iterv))
+            print("\n-------- iter {i} --------\n".format(i=iterv))
             iterv += 1
             # incremental search with indistinguishability
             if len(points) > num_points and options.inc:
