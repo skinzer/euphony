@@ -393,7 +393,10 @@ class SPhog:
             ignored.clear()
 
         num_points = len(points)
+        iterv = 0
         while not frontier.empty():
+            print("-------- iter {i} --------\n".format(i=iterv))
+            iterv += 1
             # incremental search with indistinguishability
             if len(points) > num_points and options.inc:
                 incremental_update(ignored, frontier)
@@ -415,6 +418,7 @@ class SPhog:
                     next_ph_vars, next_nts, next_expr = next_rewrite.to_template_expr()
                     # update rewrite_forest and get a string of next_rewrite
                     next_str = str(next_rewrite)
+                    print(next_str, ' --> ', str(cost_so_far[current_str]))
                     strrewrite_to_rewrite[next_str] = (next_rewrite, next_nts_addrs, (next_ph_vars, next_nts, next_expr))
                     # if it is non-terminal rewriting, it causes no cost.
                     _, _, rule_expr = rule.to_template_expr()
